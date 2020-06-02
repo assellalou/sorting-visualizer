@@ -28,10 +28,15 @@ selecSortBtn.addEventListener("click", () => SelectionSort(), false);
 function generateEls(elementsNumber) {
   visualizor.innerHTML = "";
   for (let i = 0; i < elementsNumber; i++) {
-    let length = Math.floor(Math.random() * 700) + 50;
+    let length = Math.floor(Math.random() * 800) + 50;
     let div = document.createElement("div");
     div.style.height = length + "px";
     div.className = "el";
+    if (elementsNumber < 60) {
+      heightText = document.createElement("h3");
+      heightText.innerHTML = length;
+      div.appendChild(heightText);
+    }
     visualizor.appendChild(div);
   }
 }
