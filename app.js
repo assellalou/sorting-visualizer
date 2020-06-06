@@ -9,6 +9,7 @@ const radomBtn = document.querySelector(".random");
 //sort buttons
 const bubbleSortBtn = document.querySelector(".bubbleSort");
 const selecSortBtn = document.querySelector(".selectionSort");
+const insSortBtn = document.querySelector(".insertionSort");
 
 //listenning to the slider
 elnSlide.addEventListener("change", () => {
@@ -23,6 +24,7 @@ radomBtn.addEventListener("click", () => {
 //sort listeners
 bubbleSortBtn.addEventListener("click", () => BubbleSort(), false);
 selecSortBtn.addEventListener("click", () => SelectionSort(), false);
+insSortBtn.addEventListener("click", () => InsertionSort(), false);
 
 //generate elements from slider values and random number for heights
 function generateEls(elementsNumber) {
@@ -69,10 +71,24 @@ async function SelectionSort() {
     for (let j = i + 1; j < length; j++) {
       if (els[min].offsetHeight > els[j].offsetHeight) {
         min = j;
-        els[min].style.background = "#CD0000";
+        c;
       }
     }
     await swap(i, min);
+  }
+}
+
+//Insertion sort
+async function InsertionSort() {
+  let els = visualizor.children;
+  let length = els.length;
+  for (let i = 0; i < length; i++) {
+    for (j = i - 1; j > -1 && els[j].offsetHeight > els[i].offsetHeight; j--) {
+      els[j].style.background = "#CD0000";
+      els[i].style.background = "#CD0000";
+      await swap(j + 1, j);
+    }
+    await swap(j + 1, i);
   }
 }
 
