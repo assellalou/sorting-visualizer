@@ -71,7 +71,7 @@ async function SelectionSort() {
     for (let j = i + 1; j < length; j++) {
       if (els[min].offsetHeight > els[j].offsetHeight) {
         min = j;
-        c;
+        els[min].style.background = "#CD0000";
       }
     }
     await swap(i, min);
