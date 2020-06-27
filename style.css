@@ -9,26 +9,30 @@
 html,
 body {
   height: 100%;
-  color: #00cd00;
+  color: #41ff00;
   background: #000;
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", Courier, monospace;
 }
 a {
-  color: #00cd00;
+  color: #41ff00;
   margin: 0 10px;
 }
 label {
   margin: 0 10px;
 }
 .root {
-  height: 100%;
+  height: 89%;
 
   padding: 10px;
 }
+.root h1 {
+  margin: 0 130px;
+}
 .nav {
+  background: #000;
   height: 75px;
-  outline: #00cd00 solid 1px;
+  outline: #41ff00 solid 1px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -37,13 +41,17 @@ label {
 .visual {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 99%;
+  position: relative;
+  margin: 5px 0 0 0;
+  border: 1px solid #41ff00;
+  overflow: hidden;
 }
 .el {
   width: 100%;
-  max-width: 55px;
+  max-width: 50px;
   min-width: 1px;
-  background: #00cd00;
+  background: #41ff00;
   display: inline-block;
   margin: 0 2px;
   display: flex;
@@ -60,7 +68,7 @@ label {
     overflow: hidden;
     width: 80px;
     -webkit-appearance: none;
-    background-color: #0f0;
+    background-color: #299704;
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
@@ -75,7 +83,7 @@ label {
     -webkit-appearance: none;
     height: 10px;
     cursor: ew-resize;
-    background: rgb(20, 129, 1);
+    background: #41ff00;
     box-shadow: -80px 0 0 80px #cd0000;
   }
 }
